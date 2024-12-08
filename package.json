@@ -2,9 +2,12 @@
   "name": "example-monorepo",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "format": "prettier --write \"**/*.{js,ts,tsx,md,json}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,tsx,md,json}\""
   },
   "keywords": [],
   "author": "",
@@ -12,5 +15,10 @@
   "dependencies": {
     "@types/node": "^22.10.1",
     "typescript": "^5.7.2"
-  }
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3"
+  },
+  "packageManager": "pnpm@9.15.0"
 }
